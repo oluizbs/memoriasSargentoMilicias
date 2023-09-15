@@ -1,0 +1,882 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Memórias de Um Sargento de Milícias - Manuel Antônio de Almeida</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c6318517-2649-4c6f-9866-27ec3427b7e1" class="page sans"><header><img class="page-cover-image" src="https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2012/09/Memorias-de-um-Sargento-de-Milicias-.jpg?quality=100&amp;strip=info" style="object-position:center 29.810000000000002%"/><h1 class="page-title">Memórias de Um Sargento de Milícias - Manuel Antônio de Almeida</h1><p class="page-description"></p></header><div class="page-body"><p id="f01181c7-bfd0-408c-a294-fd0c0a205c2f" class=""><strong><strong><strong><strong><strong><strong><strong><strong>Alunos: </strong></strong></strong></strong></strong></strong></strong></strong>Bernardo Rocha Cavalheiro, João Victor Marcolino e Luiz Gabriel de Souza Oliveira.</p><p id="88e4f669-d742-4f5a-8514-d13617967e08" class=""><strong>Sobre o autor:</strong>
+Filho do tenente Antônio de Almeida, e de Josefina Maria de Almeida, Manuel Antônio de
+Almeida nasceu em 17 de novembro de 1830 e morreu em 1861, com aproximadamente 30
+anos, por conta de um naufrágio.
+Sua infância foi muito carente e isso pode ter levado ele a escrever geralmente sobre a vida e
+os costumes da classe média baixa
+Foi formado em medicina, porém por dificuldades financeiras se tornou jornalista. Seu único
+livro é Memórias de um Sargento de Milícias, porém escreveu crônicas, artigos e críticas.
+Escreveu também uma peça de teatro que foi exibida post mortem que se chamava Dois
+Amores.
+Foi redator do jornal Correio Mercantil, onde escrevia a Pacotilha que consistia em uma seção
+humorística publicada geralmente aos domingos. O jornal possuía aproximadamente 2 mil
+assinantes, o que na época era uma grande façanha, visto que a maior parte da população era
+analfabeta. Além disso o jornal era um forte crítico do Partido Conservador da época
+É o patrono da cadeira de número 28 da ABL (Academia Brasileira de Letras)</p><p id="d9869229-4188-4ee7-841e-4577054fba85" class="">
+<strong>Sobre a obra:</strong>
+A obra se passa no período em que D. João VI esteve no Brasil entre 1808 e 1821. Uma das
+principais características da obra é seu humor e seu tom cômico.
+Manuel Antônio de Almeida utilizou da estratégia de lançar pequenos capítulos
+semanalmente para prender a atenção dos leitores. A obra foi publicada no antigo jornal da
+época, o Correio Mercantil do Rio de Janeiro.
+A obra não é narrada em primeira pessoa, apesar do nome memórias. Ela é narrada em
+terceira pessoa, apresentando um narrador onisciente.
+No século XIX, além da presença de uma narrativa que aborda as raízes e tradições nacionais,
+também houve romances que tratavam das inquietações humanas, principalmente as vividas
+pela burguesia. Esse tipo de narrativa era conhecida como romance urbano e possuía como
+pano de fundo a cidade e a vida social, familiar e amorosa de personagens que passam por
+situações típicas, como conflitos amorosos, corrupção, ascensão social, etc.
+Diferente dos romances publicados na época, Manuel Antônio de Almeida teve pouca
+popularidade na publicação de seus folhetins que, mais tarde, formariam a obra Memórias de
+um sargento de milícias. Isso se deve ao fato de que esse romance possuía uma estrutura
+diferente para a primeira geração do Romantismo no Brasil. Enquanto os demais autores se
+encaixavam em uma perspectiva nacionalista, que retratava a bela sociedade de classe média
+alta, com heróis belos e perfeitos, Antônio de Almeida trazia em sua narrativa o povo sofrido
+e cheio de necessidades tão conhecido de sua infância, bem como o anti-herói, um sujeito
+pobre, sem ideal, vivendo da sorte e de oportunidades que surgiam.</p><p id="29ca2146-870e-4fcc-bb4d-a8d11e0d82c7" class="">
+</p><p id="ce72cc8b-67b6-4bea-a4d8-62dee51b1ae0" class=""><strong>Personagens:</strong>
+Os principais personagens são:
+● Leonardo: protagonista da obra, filho de Leonardo-Pataca e Maria da Hortaliça.
+● Leonardo-Pataca: pai de Leonardo e esposo de Maria da Hortaliça.
+● Maria da Hortaliça: esposa de Leonardo-Pataca e mãe de Leonardo.
+● Barbeiro (padrinho): padrinho de Leonardo.
+● Parteira (madrinha): madrinha de Leonardo.
+● Chiquinha: filha da parteira e futura esposa de Leonardo-Pataca.
+● Luizinha: menina que Leonardo se apaixona e que por fim, torna-se sua esposa.
+● Dona Maria: avó de Luizinha.
+● José Manuel: amigo da família de Luizinha, interessado na fortuna deles.
+● Vidinha: mulata que se envolve com Leonardo.
+● Major Vidigal: autoridade que prende Leonardo.</p><p id="277f7f5d-b125-4c1a-bfaa-54845a225a6c" class="">
+</p><p id="493f2f27-af5f-4f30-a700-f32fd58d9650" class=""><strong><strong><strong><strong><strong><strong><strong>Resumo da história:</strong></strong></strong></strong></strong></strong></strong></p><p id="4a485f40-fb3d-4ec5-8d96-6b097a0b368b" class="">O livro se passa no tempo do rei (na época em que D.João VI estava no
+Brasil). A história começa em uma travessia de um navio vindo de
+Portugal para o Brasil e nele estava Leonardo Pataca e Maria das
+Hortaliças. Durante essa viagem, os dois começaram a conversar;
+Conversa vai, conversa vem, rolou entre os dois a famosa “pisadela
+e beliscão” (técnica, antigamente utilizada para cortejar um ao
+outro). Dessa forma os dois se apaixonaram um pelo outro e dessa
+união surgiu o “Leonardo”, filho do casal. Após isso, ocorre
+o batizado de Leonardo e nele surge o compadre (barbeiro) e a
+comadre. A festa foi uma verdadeira algazarra (muita gritaria, uma
+verdadeira zona), até que aparece o major Vidigal (o homem que
+representa a lei e a ordem) para acabar com a festa.</p><p id="9cbbc955-9254-4e1e-9cde-600647fb0915" class="">Leonardo cresceu como um verdadeiro pentelho (uma criança extremamente
+problemática e difícil). Durante esse período, a Maria das
+Hortaliças estava tendo um caso com outro homem. Dito isso, Leonardo
+Pataca pegou-os no flagra e enfureceu-se. Com isso, Leonardo perdeu
+as estribeiras e começou a bater, gritar e brigar com Maria.
+Entretanto, no meio disso tudo, Leonardo, apareceu extremamente
+confuso e chorando. Como Leonardo Pataca estava sem controle, ele
+acabou descontando em seu filho, dando um belo de um chute nele.</p><p id="de284a71-0d09-4fa4-ba8c-4488f6746dac" class="">Seu compadre (o barbeiro), vendo tudo isso de fora começou a se
+aproximar cada vez mais de Leonardo, até que ele o “adota” e,
+a partir daí, Leonardo vai morar com ele. Contudo, Leonardo
+continuou sendo extremamente mal criado e desobediente, fazendo de
+tudo para irritar seu então “pai adotivo”, porém ele o amava
+demais, perdoando tudo que ele fez. Mas o comportamento persistiu,
+então, o barbeiro teve a brilhante ideia de colocar Leonardo em
+uma igreja em que o sacristão-mor era extremamente rigoroso, com a
+intenção botá-lo na linha e também com a visão de que no futuro
+Leonardo viraria um padre e ganharia muito dinheiro.</p><p id="9f4e0f85-971d-4d22-a8e9-52dc492c83aa" class="">Em seu tempo de clérigo, Leonardo fez aprontou várias travessuras
+com um amigo que tinha feito ali, o Tomaz. Então, após aprontar
+poucas e boas, os dois acabaram sendo duramente repreendidos pelo
+sacristão-mor. Após esse ocorrido, os dois ficaram extremamente
+nervosos e começaram a planejar uma vingança. Essa vingança
+consistia em abrir para o público uma relação oculta que o
+sacristão mantinha com a cigana que ali vivia (vale ressaltar que a
+mesma estava tendo rolo com o pai de Leonardo).</p><p id="893b8827-399f-419a-9007-984f93909c10" class="">Passado um tempo, Leonardo conheceu a Luisinha, uma garota por quem se
+apaixonou e obteve um sentimento recíproco. A madrinha de Luisinha
+logo se encantou com Leonardo e começou a “conspirar” com a
+comadre de Leonardo para que os dois ficassem juntos.</p><p id="4fc13d87-0821-4606-85bc-f9a2325e1a1f" class="">Entretanto, não demorou muito tempo para que caísse no velho clichê de uma
+disputa romântica entre ele e um personagem chamado José Manuel.
+Isso rendeu diversos confrontos entre os dois durante um bom tempo.</p><p id="336be645-7930-48b9-bd70-fc14d219e2af" class="">Depois de um tempo, o compadre de Leonardo morreu, deixando seus bens
+como herança para ele. Entretanto, Leonardo não tinha idade para
+receber os seus bens, então seu pai (Leonardo Pataca) assume ele e,
+consequentemente, sua herança. Esse acontecimento gerou diversos
+conflitos e discussões entre Leonardo e seu pai, até que chegou
+um momento em que ele foi expulso de casa novamente.</p><p id="564d4ae8-5f22-4a0f-9939-0f764dcca339" class="">Então, Leonardo saiu à deriva até que encontrou seu velho amigo Tomaz
+(aquele amigo do tempo da igreja), em uma “rodinha de amigos”.
+Nessa “rodinha”, ele foi apresentado à Vidinha, uma mulher por
+quem se apaixonou à primeira vista (esquecendo assim, a Luisinha).
+Com isso, “papo vai, papo vem”, Leonardo foi se aproximando de
+Vidinha e sua família, até que chegou o momento que começou a
+morar com ela (como um agregado).</p><p id="c5354779-02d9-4aa9-9498-9f34838590a2" class="">Porém, em sua nova família, Vidinha tinha dois primos que eram apaixonados
+por ela e, com isso, os dois começaram a disputar ela com
+Leonardo. No meio de toda essa disputa, os dois primos armaram
+para cima de Leonardo, o que fez com que ele fosse preso pelo
+major Vidigal. Entretanto, ele fugiu, deixando Vidigal extremamente
+furioso.</p><p id="f1f497a4-0c24-4c76-a986-e0525c07256f" class="">Com tudo isso acontecendo, a comadre de Leonardo o aconselhou a tomar
+um jeito na vida, pois estava se tornando um verdadeiro “vadio”. 
+Então ela arrumou um emprego para ele na dispensa do palácio real.
+Porém, como sempre, ele foi infeliz e ficou com a mulher do
+Toma-Largura (ajudante real do palácio). E esse fato o trouxe um
+grande problema, fazendo com que fosse expulso do palácio.</p><p id="45f0f4e1-25d7-44ed-a79d-31c937dc64f7" class="">Nesse meio tempo, o Leonardo deu uma sumida. Então, o Toma-Largura
+conheceu a Vidinha e começou a dar em cima dela. Em meio a isso
+tudo, eles marcaram mais uma “rodinha” e se encontraram. Nisso, o
+Toma-Largura ficou extremamente bêbado e começou a zonear com tudo.
+Nesse meio tempo, o desaparecido Leonardo reaparece como policial
+(sendo uma forma de o major Vidigal puni-lo, afinal ele odiava
+trabalhar) para acabar com a farra, prendendo os que estavam ali
+presentes.</p><p id="40f84273-2e3b-48ce-8bda-4c3440a04d14" class="">Todos começaram a pensar que ele havia tomado rumo em sua vida. Mas, como
+o bom vadio que ele é, era tudo mentira. Enquanto isso, havia um
+comediante chamado Deutônio, que imitava as pessoas em troca de boas
+risadas. Porém, entre todas essas pessoas que ele imitava, estava
+major Vidigal. Então, Vidigal ficou extremamente enraivecido e
+enviou Leonardo para prendê-lo. Contudo, ao encontra-lo,
+Leonardo caiu em gargalhada com suas imitações e acabou ajudando
+Deutônio a fugir do major Vidigal. Porém, o major descobriu tudo e
+mandou prender Leonardo.</p><p id="db61e512-8c61-4aa3-895c-512a5e57c8a3" class="">Com Leonardo preso, a história voltou a falar de Luisinha que acabou
+se casando com José Manuel. Mas, esse casamento estava extremamente
+ruim, afinal ele a mantinha presa, impossibilitada de sair de casa.
+Com isso, a madrinha de Luisinha ouviu boatos de que Leonardo
+havia mudado de vida e arrumado um emprego. Só que ao conversar com
+a comadre dele, ela descobriu que o mesmo estava preso. Nisso, as
+duas começaram a planejar uma maneira de tirá-lo de lá.</p><p id="c7a5283f-31a6-4436-a20b-ad02bdda7678" class="">A maneira que elas encontraram de tirá-lo de lá foi através de um
+antigo romance de major Vidigal, “a Maria Regalada”. Com isso, as
+duas usaram-na para convencer o major a liberar Leonardo, que além
+de ser solto, recebeu uma promoção a sargento. Por conveniência, o
+José Manuel (ex-marido de Luisinha) morreu. Entretanto, havia mais
+uma coisa impedindo o casamento; que era o fato de seu cargo de
+sargento impedi-lo de se casar. Então, as duas comadres foram
+novamente falar com Maria Regalada a convencer major Vidigal a
+promovê-lo a sargento de milícias. Com isso, os dois se casaram e
+viveram felizes.</p><p id="0d0838b2-2ff8-4fec-b404-74da7c4160e0" class="">
+</p><p id="37403c5e-20e5-4797-b01e-7460e769d23d" class=""><strong>Análise</strong></p><p id="1a0abab4-c523-41f6-86f3-5df7534260be" class="">Apesar da obra ter sido publicada capítulo por capítulo, é possível perceber que Manuel Almeida já tinha todo o esboço da obra e enredo em mente; podemos ver um exemplo disso:</p><p id="c592c56f-d025-4cf4-9970-c456b68987c4" class="">“Como o velho tenente-coronel conhecia a comadre e o Leonardo, e por que se interessava por ele, o leitor saberá mais adiante”</p><p id="f52775ff-c080-46e7-aac4-9d4dcadfe16a" class="">“A este episódio da Folia seguiam-se outros de que vamos em breve dar conta aos leitores. Por agora voltaremos ao nosso visitante.”</p><p id="c0f2af2c-2b1c-4ff7-bde1-5d105b6814bc" class="">
+</p><p id="207fb9d6-9574-4f35-9ede-8b4da723c3e2" class="">O foco narrativo é em terceira pessoa, com um narrador onisciente, e com isso ocorre uma tentativa de diálogo. Como ocorre na passagem:</p><p id="7469f35d-4f2d-4ea1-9b31-33bfa3094a14" class="">“Já vê pois o leitor que o negócio não estava mal parado, e em breve saberá o resultado de tudo isto” p.21</p><p id="0ca058fb-5738-411f-adf7-dfbee94afeef" class="">
+</p><p id="bd9d4acf-612c-468e-92d7-ccf6d233a8b3" class="">No Romance há uma queda da idealização romântica dos personagens,
+mostrando-nos, inclusive, figura a de um anti-herói como protagonista do
+enredo.</p><p id="bbaa242d-a765-43f0-837f-d247f0377a7e" class="">“(..) pequeno, dizemos, tendo tantas coisas boas, escolheu a pior possível: nem foi
+para Coimbra, nem para Conceição. nem para cartório algum; não fez nenhuma
+destas coisas, nem também outra qualquer: constituiu-se um completo vadio, vadio-
+mestre, vadio-tipo.”(p .49)</p><p id="c3428d25-ab1f-4aa1-9b80-2455b68652ef" class="">
+</p><p id="3840fc03-ba8e-4cb9-8ad3-33618a009a62" class=""><strong><strong><strong><strong><strong><strong>Curiosidades</strong></strong></strong></strong></strong></strong></p><p id="98ae74a2-4921-42af-b59a-169ab0fb3627" class="">Livro em versão HQ (pela Amazon R$15,00):</p><figure id="8e0ad8df-daf7-4173-8a1b-fb6010c52baa"><a href="https://www.amazon.com.br/Memórias-Sargento-Milícias-Literatura-Brasileira/dp/8537721891" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Literatura Brasileira em Quadrinhos. Memórias de Um Sargento de Milícias</div><div class="bookmark-description">Livro novo - uma excelente sugestão - indicado para o publico de qualquer idade que tenha o habito de uma boa leitura. Pode ser também uma excelente ideia de presente.</div></div><div class="bookmark-href"><img src="https://www.amazon.com.br/favicon.ico" class="icon bookmark-icon"/>https://www.amazon.com.br/Memórias-Sargento-Milícias-Literatura-Brasileira/dp/8537721891</div></div><img src="https://m.media-amazon.com/images/I/51zqUc6tYML._SR600%2c315_PIWhiteStrip%2cBottomLeft%2c0%2c35_PIStarRatingFOURANDHALF%2cBottomLeft%2c360%2c-6_SR600%2c315_ZA312%2c445%2c290%2c400%2c400%2cAmazonEmberBold%2c12%2c4%2c0%2c0%2c5_SCLZZZZZZZ_FMpng_BG255%2c255%2c255.jpg" class="bookmark-image"/></a></figure><p id="b9929bec-fb31-4c89-9594-dc8c41b4bded" class="">HQ de graça: </p><figure id="adc5cfd7-d172-43c7-9755-fa8862030200"><div class="source"><a href="https://literaturaufalarapiraca.files.wordpress.com/2018/01/hq-memorias-de-um-sgt-de-milicias-manuel-antonio-de-almeida.pdf">https://literaturaufalarapiraca.files.wordpress.com/2018/01/hq-memorias-de-um-sgt-de-milicias-manuel-antonio-de-almeida.pdf</a></div></figure><p id="a362621c-5da7-48e2-acd6-93d422a00200" class="">
+</p><p id="1c0c39db-4bff-47af-b92f-3bf0fbb5d80a" class="">Música: composição por Paulinho da Viola e cantada por Martinho do Vila:</p><figure id="e4e66217-a201-4775-b7a2-1cad3e851646"><a href="https://youtu.be/QcJWzi2ZzVE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Memórias De Um Sargento De Milícia</div><div class="bookmark-description">Provided to YouTube by RCA Records Label
+
+Memórias De Um Sargento De Milícia · Martinho Da Vila
+
+Série Acervo - Martinho Da Vila
+
+℗ 1991 SONY MUSIC ENTERTAINMENT Brasil Ltda.
+
+Released on: 1993-11-08
+
+Composer, Lyricist: Paulinho Da Viola
+
+Auto-generated by YouTube.</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/8093e6f6/img/favicon_144x144.png" class="icon bookmark-icon"/>https://youtu.be/QcJWzi2ZzVE</div></div><img src="https://i.ytimg.com/vi/QcJWzi2ZzVE/maxresdefault.jpg" class="bookmark-image"/></a></figure><p id="3992174a-e679-48b1-8d73-f13a3b5a4a82" class="">Letra da música:</p><p id="2354f936-2719-4c98-aa9c-3853f8603f9e" class="">Memórias de Um Sargento de Milícias
+Martinho da Vila</p><div id="c4d65f45-b5c9-4595-b61d-8f08520b02d8" class="column-list"><div id="fc0943a6-f709-4141-b2ee-37eeab7f1920" style="width:81.25%" class="column"><p id="f6405bc6-c53d-4671-ba24-fc7556b72ffb" class="">Era o tempo do rei
+Quando aqui, chegou
+Um modesto casal feliz pelo recente amor
+Leonardo, tornando-se meirinho
+Deu a Maria Hortaliça um novo lar
+Um pouco de conforto e de carinho
+Dessa união, nasceu
+Um lindo varão
+Que recebeu o mesmo nome do seu pai
+Personagem central da história que contamos neste carnaval
+Mas um dia Maria
+Fez a Leonardo uma ingratidão
+Mostrando que não era uma boa companheira
+Provocou a separação
+Foi assim que o padrinho passou
+A ser do menino tutor
+A quem lhe deu toda dedicação
+Sofrendo uma grande desilusão
+Outra figura importante em sua vida
+Foi a comadre parteira popular
+Diziam que benziam de quebranto
+A beata mais famosa do lugar</p></div><div id="1a9b9417-95e6-40b4-9b54-cbd4df2ffaa8" style="width:106.25%" class="column"><p id="e4139ac7-9801-4629-9b5c-b613da3fec9c" class="">Havia nesse tempo aqui no Rio
+Tipos que devemos mencionar
+Chico Juca, era mestre em valentia
+E por todos se fazia, respeitar
+O reverendo amante da cigana
+Preso pelo Vidigal
+O justiceiro
+Homem de grande autoridade
+Que à frente dos seus granadeiros
+Era temido pelo povo da cidade
+Luisinha primeiro amor
+Que Leonardo conheceu
+E que Dona Maria, a outro como esposa concedeu
+Somente foi feliz
+Quando José Manuel
+Morreu</p><p id="c6372cfe-ca4f-43f1-8988-8f780ce82e3d" class="">Nosso herói
+Novamente se apaixonou
+Quando com sua viola
+A mulata Vidinha, esta singela modinha cantou:
+Se os meus suspiros pudessem
+Aos seus ouvidos chegar
+Verias que uma paixão
+Tem o poder de assassinar</p></div></div><p id="b759dd9a-2b98-4f04-83db-04fdb39ec4b9" class="">
+</p></div></article></body></html>
